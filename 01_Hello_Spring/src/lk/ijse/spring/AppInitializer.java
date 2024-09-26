@@ -3,6 +3,7 @@ package lk.ijse.spring;
 import lk.ijse.spring.config.AppConfig;
 import lk.ijse.spring.pojo.BasicDataSource;
 import lk.ijse.spring.pojo.Customer;
+import lk.ijse.spring.pojo.PojoOne;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class AppInitializer {
@@ -29,6 +30,11 @@ public class AppInitializer {
         //taking bean method name as bean id(basicDataSource)
         BasicDataSource basicDataSource = (BasicDataSource) ctx.getBean("basicDataSource");
         System.out.println(basicDataSource);
+
+        //changing spring bean id
+        //change PojoOne.java @Component -> @Component("ijse")
+        PojoOne pojoOne = (PojoOne) ctx.getBean("ijse");
+        System.out.println(pojoOne);
 
         ctx.close();
     }
