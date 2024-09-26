@@ -24,6 +24,12 @@ public class AppInitializer {
         Customer customerThree = (Customer) ctx.getBean("customer");
         System.out.println(customerThree);
 
+        //catch unowned class spring bean using bean id
+        //not converting class name to bean id
+        //taking bean method name as bean id(basicDataSource)
+        BasicDataSource basicDataSource = (BasicDataSource) ctx.getBean("basicDataSource");
+        System.out.println(basicDataSource);
+
         ctx.close();
     }
 }
