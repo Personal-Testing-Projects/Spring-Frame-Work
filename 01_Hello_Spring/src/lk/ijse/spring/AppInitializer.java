@@ -1,6 +1,7 @@
 package lk.ijse.spring;
 
 import lk.ijse.spring.config.AppConfig;
+import lk.ijse.spring.pojo.BasicDataSource;
 import lk.ijse.spring.pojo.Customer;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
@@ -16,6 +17,12 @@ public class AppInitializer {
         //Same reference is printing twice by above lines
         System.out.println(customerOne);
         System.out.println(customerTwo);
+
+        System.out.println("\n==================Bean ID==================");
+        //catch spring bean using bean id
+        //convert bean class name's first letter to lower case (Customer -> customer)
+        Customer customerThree = (Customer) ctx.getBean("customer");
+        System.out.println(customerThree);
 
         ctx.close();
     }
