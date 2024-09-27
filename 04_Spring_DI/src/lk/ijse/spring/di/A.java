@@ -5,10 +5,12 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class A {
-    @Autowired
+    /*@Autowired*/
     SuperB superB;//Property Injection
 
-    public A() {
+    @Autowired//contructor injection also works without this annotation
+    public A(SuperB superB) {
+        this.superB = superB;//Constructor Injection
         System.out.println("A : Instantiated");
     }
 
