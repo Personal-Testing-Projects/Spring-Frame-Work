@@ -38,5 +38,6 @@ public class AppInitializer {
         System.out.println(pojoOne1);
         System.out.println(pojoOne2);
 
+        //check destroy method is not invoking in prototype based objects
     }
 }
