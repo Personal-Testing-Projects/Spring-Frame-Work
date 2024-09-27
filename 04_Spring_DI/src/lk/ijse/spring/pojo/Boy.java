@@ -10,6 +10,9 @@ import org.springframework.stereotype.Component;
 @Component
 public class Boy implements BeanNameAware, BeanFactoryAware, ApplicationContextAware, InitializingBean, DisposableBean {
     @Autowired
+    //1-> beanId for propery name or
+    //2-> @Primary annotation or
+    //3-> @Qualifier("girl") //girl means bean id.
     GoodGirl girl;
 
     public Boy() {
