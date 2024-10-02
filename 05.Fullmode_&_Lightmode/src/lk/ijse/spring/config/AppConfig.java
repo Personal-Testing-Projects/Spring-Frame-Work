@@ -13,8 +13,15 @@ public class AppConfig {
         System.out.println("AppConfig : Instantiated");
     }
 
+    //Full Mode
+    //In full mode it satisfied inter-bean dependencies
     @Bean
     public PojoTwo pojoTwo() {
+        //Inter-bean dependencies invocation
+        PojoThree pojoThree1 = pojoThree();
+        PojoThree pojoThree2 = pojoThree();
+        System.out.println(pojoThree1);
+        System.out.println(pojoThree2);
         return new PojoTwo();
     }
 
