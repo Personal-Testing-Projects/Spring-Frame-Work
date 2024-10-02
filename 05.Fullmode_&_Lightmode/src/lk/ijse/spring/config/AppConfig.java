@@ -1,8 +1,5 @@
 package lk.ijse.spring.config;
 
-import lk.ijse.spring.pojo.PojoThree;
-import lk.ijse.spring.pojo.PojoTwo;
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
@@ -15,7 +12,7 @@ public class AppConfig {
 
     //Full Mode
     //In full mode it satisfied inter-bean dependencies
-    @Bean
+    /*@Bean
     public PojoTwo pojoTwo() {
         //Inter-bean dependencies invocation
         PojoThree pojoThree1 = pojoThree();
@@ -28,5 +25,5 @@ public class AppConfig {
     @Bean
     public PojoThree pojoThree() {
         return new PojoThree();
-    }
+    }*/
 }

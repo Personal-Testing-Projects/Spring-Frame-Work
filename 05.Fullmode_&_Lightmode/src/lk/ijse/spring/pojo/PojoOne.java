@@ -4,6 +4,7 @@ import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.*;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
+import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -35,5 +36,23 @@ public class PojoOne implements BeanNameAware, BeanFactoryAware, ApplicationCont
     @Override
     public void destroy() throws Exception {
         System.out.println("\nPojoOne : Destroy");
+    }
+
+    //Light Mode
+    //In light mode inter-bean dependencies are not satisfied
+    @Bean
+    public PojoTwo pojoTwo() {
+        //Inter-bean dependencies invocation
+        PojoThree pojoThree1 = pojoThree();
+        PojoThree pojoThree2 = pojoThree();
+        //two different references are printing
+        System.out.println(pojoThree1);
+        System.out.println(pojoThree2);
+        return new PojoTwo();
+    }
+
+    @Bean
+    public PojoThree pojoThree() {
+        return new PojoThree();
     }
 }
