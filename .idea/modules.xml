@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/02_Spring_Bean_Life_Cycle/02_Spring_Bean_Life_Cycle.iml" filepath="$PROJECT_DIR$/02_Spring_Bean_Life_Cycle/02_Spring_Bean_Life_Cycle.iml" />
       <module fileurl="file://$PROJECT_DIR$/03_Bean_Scopes/03_Bean_Scopes.iml" filepath="$PROJECT_DIR$/03_Bean_Scopes/03_Bean_Scopes.iml" />
       <module fileurl="file://$PROJECT_DIR$/04_Spring_DI/04_Spring_DI.iml" filepath="$PROJECT_DIR$/04_Spring_DI/04_Spring_DI.iml" />
+      <module fileurl="file://$PROJECT_DIR$/05.Fullmode_&amp;_Lightmode/05_Fullmode_&amp;_Lightmode.iml" filepath="$PROJECT_DIR$/05.Fullmode_&amp;_Lightmode/05_Fullmode_&amp;_Lightmode.iml" />
     </modules>
   </component>
 </project>
