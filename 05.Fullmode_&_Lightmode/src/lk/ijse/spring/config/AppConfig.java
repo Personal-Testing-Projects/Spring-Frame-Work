@@ -14,12 +14,12 @@ public class AppConfig {
     }
 
     @Bean
-    public PojoTwo getPojoTwo() {
+    public PojoTwo pojoTwo() {
         return new PojoTwo();
     }
 
     @Bean
-    public PojoThree getPojoThree() {
+    public PojoThree pojoThree() {
         return new PojoThree();
     }
 }
